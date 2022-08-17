@@ -1,11 +1,9 @@
 {
-  "homepage": "http://kware5000.github.io/skylinerealty",
   "name": "skyline-realtors",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -31,7 +29,6 @@
   },
   "devDependencies": {
     "eslint": "8.11.0",
-    "eslint-config-next": "12.1.0",
-    "gh-pages": "^4.0.0"
+    "eslint-config-next": "12.1.0"
   }
 }
