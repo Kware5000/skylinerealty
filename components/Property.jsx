@@ -18,7 +18,7 @@ const Property = ( {property: { property_id,  photo, sqft, short_price, beds, ba
             
             {/*below is image parent div*/}
             <Box>
-                <Image src={photo ? photo : defaultImage} width={385} height={270} alt='house'layout='fixed'/>
+                <Image src={photo ? photo : 'nophoto'} width={385} height={270} alt='house'layout='fixed'/>
             </Box>
 
             {/*below is property description parent div*/}
