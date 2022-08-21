@@ -1,14 +1,11 @@
-//filterData is an array filled with raw filtering data
 
 export const filterData = [
   {
-    //items is for similar types of data that needs to be changed
     items: [
       { name: "Buy", value: "for-sale" },
       //{ name: "Rent", value: "for-rent" },
     ],
-    //placeholder and queryName is the classification of the data that will be in items
-    //placeholder will be read by the user and queryN
+
     placeholder: "Purpose",
     queryName: "purpose",
   },
@@ -154,12 +151,10 @@ export const filterData = [
 ];
 
 export const getFilterValues = (filterValues) => {
-//filterValues is storing an obj containing a single dynamically changing key, who's attribute is that key as a string
-//filterValues is then destructured to allow use of that key as a variable
+
   const { purpose, price_min, price_max, sort, sqft_min, sqft_max, beds_min, baths_min, limit} =
     filterValues;
 
-//values.value uses the uses that destructured variable by storing it inside of value
   const values = [
     {
       name: "purpose",

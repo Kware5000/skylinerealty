@@ -44,23 +44,7 @@ const Search = ({ properties, listings }) => {
     
   const [searchFilters, setSearchFilters] = useState(false);
 
-  {/* allows the use of next.js router which is just a more simplistic react router */}
-  {/* router usage -->
-        the link tag --->
-            next.js uses the file system to make pages. 
-            the link take tells when you want to navigate to a certain page
-                /pageName
-                page name is also pathname
-            the ? allows you to add a query
-                /pathName?queryName=randomSpecifics
-        the router hook --->
-            always start by initializing the router
-                const router = useRouter()
-            router.query is an object that stores the page in you selected in the 
-            link tag as the query object and the query input data allows you to make specific changes
-                remember <Link href='/thisIsThePageItGoesTo?thisWillBeQueryObj=thisIsTheData'/> 
 
-*/}
   const router = useRouter();
   console.log(router)
 
@@ -138,14 +122,6 @@ export default Search;
 
 
 export async function getServerSideProps({ query }) {
-    /* remember, the query keyword IS AN OBJECT THAT COMES AFTER THE PATHNAME. 
-        you can dynamically add new page path way
-        i.e. ---> query.newPathWay    
-    */
-    /* uses variables that you will filter properties by 
-       none of the variables are created here, just used and renamed here
-       the query variables are transported in with the use of SearchFilters
-       the query is made first in the filterData file */
     const purpose = query.purpose || 'for-sale';
     const minPrice = query.price_min || '1';
     const maxPrice = query.price_max || '1500000';
